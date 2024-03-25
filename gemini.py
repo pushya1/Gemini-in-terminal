@@ -10,10 +10,10 @@ def print_colored(text, color, font=Style.BRIGHT):
 
 # Main function
 def main():
-    print_colored("Hello, USER!", Style.BRIGHT)
+    print_colored("Hello, Pushya!", Style.BRIGHT)
 
     # Configure the GenerativeAI API
-    genai.configure(api_key="PAST_YOUR_KEY_HERE")
+    genai.configure(api_key="AIzaSyBTIdeWBkwy1D_DFI04KyBpjCBuEhJcnZs")
 
     # Create a GenerativeModel instance
     model = genai.GenerativeModel('gemini-pro')
@@ -23,7 +23,7 @@ def main():
         query = input(Fore.YELLOW+Style.NORMAL + "How can I help you today? (Type 'bye' to exit)\n"+Fore.RED+Style.BRIGHT)
 
         # Check for exit condition
-        if query.lower() == 'bye' or 'exit':
+        if query.lower() in ['bye', 'exit']:
             print_colored("Goodbye!", Fore.WHITE)
             break
 
